@@ -10,8 +10,8 @@ public class NetworkMenu : MonoBehaviour, INetworkRunnerCallbacks
 {
     public static NetworkMenu instance;
     public NetworkRunner runner;
-    public GameObject VRPlayerPrefab;
-    public GameObject SpecPrefab;
+    //public GameObject SpecPrefab;
+    //public Dictionary<PlayerRef, NetworkObject> playerNetworkObjects = new Dictionary<PlayerRef, NetworkObject>();
     
     [Header("Session List")] 
     public GameObject roomListCanvas;
@@ -58,7 +58,7 @@ public class NetworkMenu : MonoBehaviour, INetworkRunnerCallbacks
         if (startGameResult.Ok)
         {
             // Load the scene after confirming the session start is successful
-            SceneManager.LoadSceneAsync(0);
+            SceneManager.LoadSceneAsync("Menu");
         }
         else
         {
@@ -69,7 +69,16 @@ public class NetworkMenu : MonoBehaviour, INetworkRunnerCallbacks
 
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
     {
-        Debug.Log("OnPlayerJoined");
+        //NetworkObject spawnedNetworkObject = null;
+        Debug.Log("NetworkMenu: OnPlayerJoined");
+        // Debug.Log("NetworkMenu: Spawn SpectatorPlayer[" + player.PlayerId + "] join");
+        // spawnedNetworkObject = runner.Spawn(SpecPrefab, Vector3.zero, Quaternion.identity, player);
+        //
+        // if (spawnedNetworkObject != null)
+        // {
+        //     DontDestroyOnLoad(spawnedNetworkObject.gameObject);
+        //     playerNetworkObjects[player] = spawnedNetworkObject;
+        // }
     }
 
     public void OnPlayerLeft(NetworkRunner runner, PlayerRef player)
@@ -178,7 +187,7 @@ public class NetworkMenu : MonoBehaviour, INetworkRunnerCallbacks
     
     private void OnApplicationQuit()
     {
-        if (runner != null && runner.isActiveAndEnabled)
+        if (runner != null)
         {
             runner.Shutdown();
         }

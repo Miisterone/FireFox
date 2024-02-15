@@ -1,14 +1,14 @@
 fileFormatVersion: 2
 guid: 80dbc8ffae581ad4292d5a0f74df8ee5
 ModelImporter:
-  serializedVersion: 21300
+  serializedVersion: 21202
   internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_Leaves
-    second: {fileID: 2100000, guid: 769436cd1df4402459ef546e1e6a4b60, type: 2}
+    second: {fileID: 2100000, guid: 982e18a108ae1c948bb0cac94d769eb6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -112,7 +112,6 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

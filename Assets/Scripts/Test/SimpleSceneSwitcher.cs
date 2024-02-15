@@ -1,4 +1,3 @@
-// path/filename: SimpleSceneSwitcher.cs
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Fusion;
@@ -8,9 +7,7 @@ public class SimpleSceneSwitcher : NetworkBehaviour
 {
     [Networked(OnChanged = nameof(OnSceneIndexChanged))]
     public string CurrentSceneName { get; set; }
-
-    // Use a list of strings for scene names
-    public List<string> sceneNames = new List<string>();
+    public List<string> sceneNames = new List<string> {"Menu", "Level0", "Level1"};
 
     public override void Spawned()
     {
@@ -25,7 +22,7 @@ public class SimpleSceneSwitcher : NetworkBehaviour
         }
     }
 
-    private void CycleToNextScene()
+    public void CycleToNextScene()
     {
         int currentIndex = sceneNames.IndexOf(CurrentSceneName);
         int nextIndex = (currentIndex + 1) % sceneNames.Count;
@@ -52,5 +49,15 @@ public class SimpleSceneSwitcher : NetworkBehaviour
     private void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void Up()
+    {
+        transform.position += transform.up;
+    }
+
+    public void Down()
+    {
+        transform.position -= transform.forward;
     }
 }

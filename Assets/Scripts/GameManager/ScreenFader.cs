@@ -4,7 +4,7 @@ using UnityEngine;
 public class ScreenFader : MonoBehaviour
 {
     public Material fadeMaterial;
-    public float fadeDuration = 2.0f;
+    public float fadeDuration = 4.0f;
 
     void Start()
     {

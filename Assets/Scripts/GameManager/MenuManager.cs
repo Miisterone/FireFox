@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -12,6 +11,8 @@ public class MenuManager : MonoBehaviour
 
     public void StartGame()
     {
-       SceneManager.LoadScene("Level0");
+       // SceneManager.LoadScene(2);
+       SimpleSceneSwitcher sceneSwitcher = FindObjectOfType<SimpleSceneSwitcher>();
+       sceneSwitcher.CycleToNextScene();
     }
 }

@@ -1,10 +1,14 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public string nextLevelName;
+    public SceneSwitcher SceneSwitcher;
+
+    private void Start()
+    {
+        SceneSwitcher = GameObject.Find("Camera Rig").GetComponent<SceneSwitcher>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,6 +23,6 @@ public class LevelManager : MonoBehaviour
     private IEnumerator WaitAndLoad()
     {
         yield return new WaitForSecondsRealtime(4f);
-        SceneManager.LoadScene(nextLevelName);
+        SceneSwitcher.NextLevel();
     }
 }

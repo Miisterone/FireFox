@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class RefreshButton : MonoBehaviour
 {
-    private LeanButton refreshButton;
+    private Button refreshButton;
 
     private void Awake()
     {
         if (refreshButton == null)
-            refreshButton = GetComponent<LeanButton>();
+            refreshButton = GetComponent<Button>();
         
-        refreshButton.OnClick.AddListener(Refresh);
+        refreshButton.onClick.AddListener(Refresh);
     }
 
     private void Refresh()

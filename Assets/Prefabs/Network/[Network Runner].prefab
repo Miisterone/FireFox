@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 2281813957836293494}
   - component: {fileID: 6047595473246269055}
   - component: {fileID: 5978277583427633940}
-  - component: {fileID: 592021258914457117}
-  - component: {fileID: 3409229475065284856}
+  - component: {fileID: 3055284853406620465}
   m_Layer: 0
   m_Name: '[Network Runner]'
   m_TagString: Untagged
@@ -107,7 +106,7 @@ MonoBehaviour:
   OnReliableData:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &592021258914457117
+--- !u!114 &3055284853406620465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,19 +119,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
-  VRPlayerPrefab: {fileID: 6915115871672809518, guid: a95a5087c23f4104ab1121e6e8880029, type: 3}
   SpecPrefab: {fileID: 6915115871672809518, guid: 277f4ef8af3fdbb48bb1cce346302a29, type: 3}
---- !u!114 &3409229475065284856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 710257161476471024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90a93abf1a391964a94e5c139605105b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowHierarchyWindowOverlay: 1
-  PostLoadDelayFrames: 1
