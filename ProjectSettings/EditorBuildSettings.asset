@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MobileMenu.unity
-    guid: d0a8f812ceacf6d40903668209f1e4be
-  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 428dd3a7ac3465940ba13da5ca374257
   - enabled: 1
@@ -20,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FireFox/Level2.unity
     guid: ba000a03a295e8b4ebc6a1b6dfe1bcee
+  - enabled: 1
+    path: Assets/Scenes/FireFox/Level3.unity
+    guid: 6bfc80a92a281c14dabdb7ef16de2363
   - enabled: 1
     path: Assets/Scenes/FireFox/Level4.unity
     guid: bcedb0b9dc75fb94dbc9bbb17bfbcfd8

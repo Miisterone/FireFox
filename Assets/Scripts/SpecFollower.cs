@@ -14,7 +14,7 @@ public class SpecFollower : NetworkBehaviour
         if ((vrPlayerController == null || !vrPlayerController.IsReady) && timeSinceLastCheck >= checkInterval)
         {
             // Réessayer de trouver le VRPlayerController
-            GameObject vrPlayerObject = GameObject.FindWithTag("Player");
+            GameObject vrPlayerObject = GameObject.Find("Camera Rig");
             if (vrPlayerObject != null) 
             {
                 vrPlayerController = vrPlayerObject.GetComponent<VRPlayerController>();
